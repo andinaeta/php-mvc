@@ -32,7 +32,7 @@
     <div class="col-md-6">
       <h2 class="ml-1">Users</h2>
       <ul class="list-group">
-        <?php foreach ($data['users'] as $user) : ?>
+        <?php foreach ($users as $user) : ?>
           <li class="list-group-item d-flex justify-content-between align-items-center">
             <div><?= $user['name']; ?></div>
             <div>
