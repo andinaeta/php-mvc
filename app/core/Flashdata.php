@@ -2,16 +2,16 @@
 
 class Flashdata
 {
-  public static function setFlash($data)
+  public static function set($name, $data)
   {
-    $_SESSION['flashdata'] = $data;
+    $_SESSION['flashdata'][$name] = $data;
   }
 
-  public static function flash()
+  public static function flash($name)
   {
-    if (isset($_SESSION['flashdata'])) {
-      echo $_SESSION['flashdata'];
-      unset($_SESSION['flashdata']);
+    if (isset($_SESSION['flashdata'][$name])) {
+      echo $_SESSION['flashdata'][$name];
+      unset($_SESSION['flashdata'][$name]);
     }
   }
 }

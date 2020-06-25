@@ -2,5 +2,7 @@
 
 if (!session_id()) session_start();
 
-require_once '../app/init.php';
+define('APP_PATH', '../app/');
+
+require_once APP_PATH . 'init.php';
 $app = new App;
